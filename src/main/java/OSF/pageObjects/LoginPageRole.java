@@ -1,0 +1,36 @@
+package OSF.pageObjects;
+
+import OSF.waits.WaitForElement;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+
+public class LoginPageRole {
+
+    public WebDriver driver;
+
+    public LoginPageRole(WebDriver driver) {
+        this.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
+
+    @FindBy(css = "*[for*='rw']")
+    WebElement rolarw;
+
+    @FindBy(xpath = "//a[@id='buttonContinue']")
+    WebElement clickcontinue;
+
+    public WebElement getRolaRW() {
+        WaitForElement.waitUntillElementIsVisible(rolarw);
+        return rolarw;
+    }
+
+    public WebElement getContinue() {WaitForElement.waitUntillElementIsVisible(clickcontinue);
+        return clickcontinue;
+    }
+
+
+}
+
