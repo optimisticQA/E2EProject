@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="4.825" tests="5" errors="0" skipped="4" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="OSF.LoginAplication" time="6.022" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_241\jre\bin"/>
@@ -15,6 +15,7 @@
     <property name="user.country" value="PL"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value=""/>
+    <property name="test" value="LoginAplication"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="C:\Users\alubkowski\IdeaProjects\E2EProject"/>
     <property name="java.runtime.version" value="1.8.0_241-b07"/>
@@ -45,7 +46,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_241\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=LoginAplication test"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="pl"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -64,31 +65,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="loginPage" classname="OSF.CreateAnApplication" time="0.82">
-    <failure message="expected [Pobierz login i hasło1] but found [Pobierz login i hasło]" type="java.lang.AssertionError">java.lang.AssertionError: expected [Pobierz login i hasło1] but found [Pobierz login i hasło]
-	at OSF.CreateAnApplication.loginPage(CreateAnApplication.java:33)
-</failure>
-    <system-out><![CDATA[2021-02-09 15:26:40,299 main ERROR Error processing element Propertiest ([Configuration: null]): CLASS_NOT_FOUND
-]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.88 (89e2380a3e36c3464b5dd1302349b1382549290d-refs/branch-heads/4280@{#1761}) on port 30898
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-[1612880801.714][WARNING]: This version of ChromeDriver has not been tested with Chrome version 88.
-lut 09, 2021 3:26:43 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-]]></system-err>
-  </testcase>
-  <testcase name="createAplication" classname="OSF.CreateAnApplication" time="0">
-    <skipped message="Method CreateAnApplication.createAplication()[pri:0, instance:OSF.CreateAnApplication@815b41f] depends on not successfully finished methods"/>
-  </testcase>
-  <testcase name="selectAgency" classname="OSF.CreateAnApplication" time="0">
-    <skipped message="Method CreateAnApplication.selectAgency()[pri:0, instance:OSF.CreateAnApplication@815b41f] depends on not successfully finished methods"/>
-  </testcase>
-  <testcase name="newApplication" classname="OSF.CreateAnApplication" time="0">
-    <skipped message="Method CreateAnApplication.newApplication()[pri:0, instance:OSF.CreateAnApplication@815b41f] depends on not successfully finished methods"/>
-  </testcase>
-  <testcase name="uzupelnijWnioskodawca" classname="OSF.CreateAnApplication" time="0">
-    <skipped message="Method CreateAnApplication.uzupelnijWnioskodawca(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:OSF.CreateAnApplication@815b41f] depends on not successfully finished methods"/>
-  </testcase>
+  <testcase name="loginPage" classname="OSF.LoginAplication" time="2.089"/>
 </testsuite>

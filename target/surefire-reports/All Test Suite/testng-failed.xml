@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [All Test Suite]">
-  <test thread-count="5" verbose="0" name="C:/Users/alubkowski/IdeaProjects/E2EProject(failed)">
+  <listeners>
+    <listener class-name="OSF.Listeners"/>
+  </listeners>
+  <test thread-count="5" verbose="0" name="Create an application(failed)">
     <classes>
       <class name="OSF.CreateAnApplication">
         <methods>
@@ -15,5 +18,5 @@
         </methods>
       </class> <!-- OSF.CreateAnApplication -->
     </classes>
-  </test> <!-- C:/Users/alubkowski/IdeaProjects/E2EProject(failed) -->
+  </test> <!-- Create an application(failed) -->
 </suite> <!-- Failed suite [All Test Suite] -->

@@ -4,6 +4,7 @@ import OSF.pageObjects.*;
 import OSF.resources.base;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -15,6 +16,7 @@ import java.io.IOException;
 
 public class CreateAnApplication extends base {
 
+    public WebDriver driver;
     private static Logger log = LogManager.getLogger(base.class.getName());
 
     @BeforeTest()
@@ -28,7 +30,7 @@ public class CreateAnApplication extends base {
         driver.get(prop.getProperty("url"));
         log.info("Navigated to Login page");
         LoginPage l = new LoginPage(driver);
-        Assert.assertEquals(l.getLoginAndPassword().getText(), "Pobierz login i hasło");
+        Assert.assertEquals(l.getLoginAndPassword().getText(), "Pobierz login i hasło1");
         log.info("Successfully validated Text message");
         l.getUsername().sendKeys(Username);
         l.getPassword().sendKeys(Password);
@@ -42,13 +44,14 @@ public class CreateAnApplication extends base {
 
         HomePageRW hrw = new HomePageRW(driver);
         Assert.assertTrue(hrw.getHomePageNowyWniosek().isDisplayed());
-        log.info("Navigated to Home page");
+        log.info("Successfully navigated to Home page");
     }
 
     @Test(dependsOnMethods = {"loginPage"})
     public void createAplication() throws IOException {
         HomePageRW hrw = new HomePageRW(driver);
         hrw.getHomePageNowyWniosek().click();
+        log.info("Successfully navigated to the create application window");
     }
 
     @Test(dependsOnMethods = {"createAplication"})
@@ -56,6 +59,7 @@ public class CreateAnApplication extends base {
         HomePageRWagency hag = new HomePageRWagency(driver);
         hag.getAgencyNameMNISW().click();
         hag.getContestGNGk5().click();
+        log.info("Successfully agency selected");
     }
 
     @Test(dependsOnMethods = {"selectAgency"})
@@ -64,6 +68,7 @@ public class CreateAnApplication extends base {
         na.getDownloadMessage().click();
         na.getSelectStatement().click();
         na.getCreateApplication().click();
+        log.info("The application has been created successfully");
     }
 
     @Test(dependsOnMethods = {"newApplication"}, dataProvider = "getDataWnioskodawca")
@@ -88,6 +93,7 @@ public class CreateAnApplication extends base {
         w.getStatement3().click();
         w.getStatement4().click();
         w.getSaveStatement().click();
+        log.info("The applicant section was successfully completed");
     }
 
     @AfterTest
