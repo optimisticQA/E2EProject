@@ -55,16 +55,16 @@ public class Wnioskodawca {
     @FindBy(xpath = "//h2[contains(text(),'Oświadczenia')]/following-sibling::div[1]/button")
     WebElement editStatement;
 
-    @FindBy(css = "div.ui-widget:nth-child(12) div.fixed-page-width div.ui-panelgrid.ui-widget.main-layout div.ui-panelgrid-content.ui-widget-content.ui-grid.ui-grid-responsive div.ui-g div.ui-panelgrid-cell.main-layout-column-right.ui-g-12.ui-md-6:nth-child(2) div.zsun-section:nth-child(6) div.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-shadow.ui-hidden-container.ui-draggable.ui-resizable div.ui-dialog-content.ui-widget-content:nth-child(2) table.ui-panelgrid.ui-widget.ui-noborder tbody:nth-child(1) tr.ui-widget-content:nth-child(1) td.ui-panelgrid-cell div.ui-selectbooleancheckbox.ui-chkbox.ui-widget.padding > span.ui-chkbox-label")
+    @FindBy(xpath = "//div[@id='wnioskodawcaForm:editTblOswiadczeniaId:0:oswInformacjeWeWnioskuEditId']")
     WebElement statement1;
 
-    @FindBy(css = "div.ui-widget:nth-child(12) div.fixed-page-width div.ui-panelgrid.ui-widget.main-layout div.ui-panelgrid-content.ui-widget-content.ui-grid.ui-grid-responsive div.ui-g div.ui-panelgrid-cell.main-layout-column-right.ui-g-12.ui-md-6:nth-child(2) div.zsun-section:nth-child(6) div.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-shadow.ui-hidden-container.ui-draggable.ui-resizable div.ui-dialog-content.ui-widget-content:nth-child(2) table.ui-panelgrid.ui-widget.ui-noborder tbody:nth-child(1) tr.ui-widget-content:nth-child(3) td.ui-panelgrid-cell div.ui-selectbooleancheckbox.ui-chkbox.ui-widget.padding > span.ui-chkbox-label")
+    @FindBy(xpath = "//div[@id='wnioskodawcaForm:editTblOswiadczeniaId:1:oswInformacjeWeWnioskuEditId']")
     WebElement statement2;
 
-    @FindBy(css = "div.ui-widget:nth-child(12) div.fixed-page-width div.ui-panelgrid.ui-widget.main-layout div.ui-panelgrid-content.ui-widget-content.ui-grid.ui-grid-responsive div.ui-g div.ui-panelgrid-cell.main-layout-column-right.ui-g-12.ui-md-6:nth-child(2) div.zsun-section:nth-child(6) div.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-shadow.ui-hidden-container.ui-draggable.ui-resizable div.ui-dialog-content.ui-widget-content:nth-child(2) table.ui-panelgrid.ui-widget.ui-noborder tbody:nth-child(1) tr.ui-widget-content:nth-child(7) td.ui-panelgrid-cell div.ui-selectbooleancheckbox.ui-chkbox.ui-widget.padding > span.ui-chkbox-label")
+    @FindBy(xpath = "//div[@id='wnioskodawcaForm:editTblOswiadczeniaId:3:oswInformacjeWeWnioskuEditId']")
     WebElement statement3;
 
-    @FindBy(css = "div.ui-widget:nth-child(12) div.fixed-page-width div.ui-panelgrid.ui-widget.main-layout div.ui-panelgrid-content.ui-widget-content.ui-grid.ui-grid-responsive div.ui-g div.ui-panelgrid-cell.main-layout-column-right.ui-g-12.ui-md-6:nth-child(2) div.zsun-section:nth-child(6) div.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-shadow.ui-hidden-container.ui-draggable.ui-resizable div.ui-dialog-content.ui-widget-content:nth-child(2) table.ui-panelgrid.ui-widget.ui-noborder tbody:nth-child(1) tr.ui-widget-content:nth-child(9) td.ui-panelgrid-cell div.ui-selectbooleancheckbox.ui-chkbox.ui-widget.padding > span.ui-chkbox-label")
+    @FindBy(xpath = "//div[@id='wnioskodawcaForm:editTblOswiadczeniaId:4:oswInformacjeWeWnioskuEditId']")
     WebElement statement4;
 
     @FindBy(xpath = "//h2[contains(text(),'Oświadczenia')]/following-sibling::div[2]/div/div[3]/span/button[1]")
