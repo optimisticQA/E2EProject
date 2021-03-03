@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="4.825" tests="5" errors="0" skipped="4" failures="1">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="17.284" tests="5" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_241\jre\bin"/>
@@ -64,31 +64,21 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="loginPage" classname="OSF.CreateAnApplication" time="0.82">
-    <failure message="expected [Pobierz login i hasło1] but found [Pobierz login i hasło]" type="java.lang.AssertionError">java.lang.AssertionError: expected [Pobierz login i hasło1] but found [Pobierz login i hasło]
-	at OSF.CreateAnApplication.loginPage(CreateAnApplication.java:33)
+  <testcase name="loginPage" classname="OSF.CreateAnApplication" time="2.294"/>
+  <testcase name="createAplication" classname="OSF.CreateAnApplication" time="1.177"/>
+  <testcase name="selectAgency" classname="OSF.CreateAnApplication" time="0.375"/>
+  <testcase name="newApplication" classname="OSF.CreateAnApplication" time="1.384"/>
+  <testcase name="uzupelnijWnioskodawca" classname="OSF.CreateAnApplication" time="7.923">
+    <failure message="stale element reference: element is not attached to the page document&#10;  (Session info: chrome=88.0.4324.190)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html&#10;Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;&#10;System info: host: &apos;W-20191203033&apos;, ip: &apos;10.10.33.31&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_241&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.190, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\ALUBKO~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52068}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}&#10;Session ID: fdebf03da8a6d32bddee49043b174c7f" type="org.openqa.selenium.StaleElementReferenceException">org.openqa.selenium.StaleElementReferenceException: 
+stale element reference: element is not attached to the page document
+  (Session info: chrome=88.0.4324.190)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'W-20191203033', ip: '10.10.33.31', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.190, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\ALUBKO~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52068}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: fdebf03da8a6d32bddee49043b174c7f
+	at OSF.CreateAnApplication.uzupelnijWnioskodawca(CreateAnApplication.java:91)
 </failure>
-    <system-out><![CDATA[2021-02-09 15:26:40,299 main ERROR Error processing element Propertiest ([Configuration: null]): CLASS_NOT_FOUND
-]]></system-out>
-    <system-err><![CDATA[Starting ChromeDriver 87.0.4280.88 (89e2380a3e36c3464b5dd1302349b1382549290d-refs/branch-heads/4280@{#1761}) on port 30898
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-[1612880801.714][WARNING]: This version of ChromeDriver has not been tested with Chrome version 88.
-lut 09, 2021 3:26:43 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-]]></system-err>
-  </testcase>
-  <testcase name="createAplication" classname="OSF.CreateAnApplication" time="0">
-    <skipped message="Method CreateAnApplication.createAplication()[pri:0, instance:OSF.CreateAnApplication@815b41f] depends on not successfully finished methods"/>
-  </testcase>
-  <testcase name="selectAgency" classname="OSF.CreateAnApplication" time="0">
-    <skipped message="Method CreateAnApplication.selectAgency()[pri:0, instance:OSF.CreateAnApplication@815b41f] depends on not successfully finished methods"/>
-  </testcase>
-  <testcase name="newApplication" classname="OSF.CreateAnApplication" time="0">
-    <skipped message="Method CreateAnApplication.newApplication()[pri:0, instance:OSF.CreateAnApplication@815b41f] depends on not successfully finished methods"/>
-  </testcase>
-  <testcase name="uzupelnijWnioskodawca" classname="OSF.CreateAnApplication" time="0">
-    <skipped message="Method CreateAnApplication.uzupelnijWnioskodawca(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:OSF.CreateAnApplication@815b41f] depends on not successfully finished methods"/>
   </testcase>
 </testsuite>

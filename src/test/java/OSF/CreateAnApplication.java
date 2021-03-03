@@ -30,7 +30,7 @@ public class CreateAnApplication extends base {
         driver.get(prop.getProperty("url"));
         log.info("Navigated to Login page");
         LoginPage l = new LoginPage(driver);
-        Assert.assertEquals(l.getLoginAndPassword().getText(), "Pobierz login i hasło1");
+        Assert.assertEquals(l.getLoginAndPassword().getText(), "Pobierz login i hasło");
         log.info("Successfully validated Text message");
         l.getUsername().sendKeys(Username);
         l.getPassword().sendKeys(Password);

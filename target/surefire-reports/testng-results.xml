@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="1" ignored="0" total="5" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="5536" started-at="2021-02-09T15:27:48 CET" finished-at="2021-02-09T15:27:54 CET">
+  <suite name="All Test Suite" duration-ms="16730" started-at="2021-03-03T07:16:37 CET" finished-at="2021-03-03T07:16:54 CET">
     <groups>
     </groups>
-    <test name="Surefire test" duration-ms="5536" started-at="2021-02-09T15:27:48 CET" finished-at="2021-02-09T15:27:54 CET">
-      <class name="OSF.LoginAplication">
-        <test-method status="PASS" signature="initialize()[pri:0, instance:OSF.LoginAplication@2d1ef81a]" name="initialize" is-config="true" duration-ms="3400" started-at="2021-02-09T15:27:48 CET" finished-at="2021-02-09T15:27:52 CET">
+    <test name="Create an application" duration-ms="16730" started-at="2021-03-03T07:16:37 CET" finished-at="2021-03-03T07:16:54 CET">
+      <class name="OSF.CreateAnApplication">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:OSF.CreateAnApplication@815b41f]" name="initialize" is-config="true" duration-ms="3522" started-at="2021-03-03T07:16:37 CET" finished-at="2021-03-03T07:16:41 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method status="PASS" signature="loginPage(java.lang.String, java.lang.String)[pri:0, instance:OSF.LoginAplication@2d1ef81a]" name="loginPage" duration-ms="2087" started-at="2021-02-09T15:27:52 CET" data-provider="getData" finished-at="2021-02-09T15:27:54 CET">
+        <test-method status="PASS" signature="loginPage(java.lang.String, java.lang.String)[pri:0, instance:OSF.CreateAnApplication@815b41f]" name="loginPage" duration-ms="2293" started-at="2021-03-03T07:16:41 CET" data-provider="getData" finished-at="2021-03-03T07:16:43 CET">
           <params>
             <param index="0">
               <value>
@@ -27,11 +27,138 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginPage -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:OSF.LoginAplication@2d1ef81a]" name="teardown" is-config="true" duration-ms="34" started-at="2021-02-09T15:27:54 CET" finished-at="2021-02-09T15:27:54 CET">
+        <test-method status="PASS" signature="createAplication()[pri:0, instance:OSF.CreateAnApplication@815b41f]" name="createAplication" duration-ms="1177" started-at="2021-03-03T07:16:43 CET" depends-on-methods="OSF.CreateAnApplication.loginPage" finished-at="2021-03-03T07:16:44 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createAplication -->
+        <test-method status="PASS" signature="selectAgency()[pri:0, instance:OSF.CreateAnApplication@815b41f]" name="selectAgency" duration-ms="375" started-at="2021-03-03T07:16:44 CET" depends-on-methods="OSF.CreateAnApplication.createAplication" finished-at="2021-03-03T07:16:45 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectAgency -->
+        <test-method status="PASS" signature="newApplication()[pri:0, instance:OSF.CreateAnApplication@815b41f]" name="newApplication" duration-ms="1384" started-at="2021-03-03T07:16:45 CET" depends-on-methods="OSF.CreateAnApplication.selectAgency" finished-at="2021-03-03T07:16:46 CET">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- newApplication -->
+        <test-method status="FAIL" signature="uzupelnijWnioskodawca(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:OSF.CreateAnApplication@815b41f]" name="uzupelnijWnioskodawca" duration-ms="7600" started-at="2021-03-03T07:16:46 CET" data-provider="getDataWnioskodawca" depends-on-methods="OSF.CreateAnApplication.newApplication" finished-at="2021-03-03T07:16:54 CET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Politechnika Warszawska]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[OPI Test BP]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[78249000052816432318720678]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[/epuap/test]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[8883323940]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[10448760077193]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.StaleElementReferenceException">
+            <message>
+              <![CDATA[stale element reference: element is not attached to the page document
+  (Session info: chrome=88.0.4324.190)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'W-20191203033', ip: '10.10.33.31', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.190, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\ALUBKO~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52068}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: fdebf03da8a6d32bddee49043b174c7f]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=88.0.4324.190)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'W-20191203033', ip: '10.10.33.31', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_241'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 88.0.4324.190, chrome: {chromedriverVersion: 87.0.4280.88 (89e2380a3e36c..., userDataDir: C:\Users\ALUBKO~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:52068}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: fdebf03da8a6d32bddee49043b174c7f
+at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:326)
+at sun.reflect.GeneratedMethodAccessor1.invoke(Unknown Source)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at com.sun.proxy.$Proxy23.isDisplayed(Unknown Source)
+at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:314)
+at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:43)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:300)
+at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:297)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+at OSF.waits.WaitForElement.waitUntillElementIsVisible(WaitForElement.java:16)
+at OSF.pageObjects.Wnioskodawca.getStatement1(Wnioskodawca.java:134)
+at OSF.CreateAnApplication.uzupelnijWnioskodawca(CreateAnApplication.java:91)
+at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.lang.reflect.Method.invoke(Method.java:498)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:132)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:599)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:174)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:822)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:147)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.util.ArrayList.forEach(ArrayList.java:1257)
+at org.testng.TestRunner.privateRun(TestRunner.java:764)
+at org.testng.TestRunner.run(TestRunner.java:585)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:384)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:378)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:337)
+at org.testng.SuiteRunner.run(SuiteRunner.java:286)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1218)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1140)
+at org.testng.TestNG.runSuites(TestNG.java:1069)
+at org.testng.TestNG.run(TestNG.java:1037)
+at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- uzupelnijWnioskodawca -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:OSF.CreateAnApplication@815b41f]" name="teardown" is-config="true" duration-ms="38" started-at="2021-03-03T07:16:54 CET" finished-at="2021-03-03T07:16:54 CET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- OSF.LoginAplication -->
-    </test> <!-- Surefire test -->
-  </suite> <!-- Surefire suite -->
+      </class> <!-- OSF.CreateAnApplication -->
+    </test> <!-- Create an application -->
+  </suite> <!-- All Test Suite -->
 </testng-results>

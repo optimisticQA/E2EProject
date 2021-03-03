@@ -9,10 +9,10 @@
       <class name="OSF.CreateAnApplication">
         <methods>
           <include name="createAplication"/>
-          <include name="uzupelnijWnioskodawca"/>
+          <include name="uzupelnijWnioskodawca" invocation-numbers="0"/>
           <include name="teardown"/>
           <include name="selectAgency"/>
-          <include name="loginPage" invocation-numbers="0"/>
+          <include name="loginPage"/>
           <include name="initialize"/>
           <include name="newApplication"/>
         </methods>
