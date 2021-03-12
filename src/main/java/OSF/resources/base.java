@@ -47,15 +47,9 @@ public class base {
 
     @DataProvider(name = "getAllData")
     public Object[][] getAllData() {
-        Object[][] data = new Object[1][8];
+        Object[][] data = new Object[1][2];
         data[0][0] = "automattest4"; //Username
-        data[0][1] = "Test1234"; //Password
-        data[0][2] = "Politechnika Warszawska"; //Wnioskodawca
-        data[0][3] = "OPI Test BP"; //Nazwa banku
-        data[0][4] = "78249000052816432318720678"; //Numer konta
-        data[0][5] = "/epuap/test"; //Adres ePUAP
-        data[0][6] = "8883323940"; //Numer NIP
-        data[0][7] = "10448760077193"; //Numer Regon
+        data[0][1] = "Test12345"; //Password
         return data;
     }
 }

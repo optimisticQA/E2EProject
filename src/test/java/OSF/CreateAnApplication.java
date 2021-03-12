@@ -105,7 +105,7 @@ public class CreateAnApplication extends base {
     public Object[][] getData() {
         Object[][] data = new Object[1][2];
         data[0][0] = "automattest4"; //Username
-        data[0][1] = "Test1234"; //Password
+        data[0][1] = "Test12345"; //Password
         return data;
     }
 
