@@ -30,19 +30,17 @@ public class CreateAnApplication extends base {
         driver.get(prop.getProperty("url"));
         log.info("Navigated to Login page");
         LoginPage l = new LoginPage(driver);
-        Assert.assertEquals(l.getLoginAndPassword().getText(), "Pobierz login i hasło1");
+        Assert.assertEquals(l.getLoginAndPassword().getText(), "Pobierz login i hasło");
         log.info("Successfully validated Text message");
         l.getUsername().sendKeys(Username);
         l.getPassword().sendKeys(Password);
-        l.getLogin().click();
+
+        LoginPageRole lr = l.getLogin();
         log.info("Successfully login");
+        lr.getRolaRW();
 
-        LoginPageRole lr = new LoginPageRole(driver);
-        lr.getRolaRW().click();
-        lr.getContinue().click();
+        HomePageRW hrw = lr.getContinue();
         log.info("Successfully role selected");
-
-        HomePageRW hrw = new HomePageRW(driver);
         Assert.assertTrue(hrw.getHomePageNowyWniosek().isDisplayed());
         log.info("Successfully navigated to Home page");
     }

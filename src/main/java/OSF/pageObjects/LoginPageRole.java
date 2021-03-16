@@ -24,11 +24,15 @@ public class LoginPageRole {
 
     public WebElement getRolaRW() {
         WaitForElement.waitUntillElementIsVisible(rolarw);
+        rolarw.click();
         return rolarw;
     }
 
-    public WebElement getContinue() {WaitForElement.waitUntillElementIsVisible(clickcontinue);
-        return clickcontinue;
+    public HomePageRW getContinue() {
+        WaitForElement.waitUntillElementIsVisible(clickcontinue);
+        clickcontinue.click();
+        HomePageRW hrw = new HomePageRW(driver);
+        return hrw;
     }
 
 

@@ -1,0 +1,9 @@
+OSF\pageObjects\Wnioskodawca.class
+OSF\pageObjects\HomePageRW.class
+OSF\resources\ExtentReporterNG.class
+OSF\pageObjects\LoginPage.class
+OSF\pageObjects\LoginPageRole.class
+OSF\pageObjects\NewAplication.class
+OSF\waits\WaitForElement.class
+OSF\pageObjects\HomePageRWagency.class
+OSF\resources\base.class

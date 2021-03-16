@@ -39,9 +39,12 @@ public class LoginPage {
         return password;
     }
 
-    public WebElement getLogin() {
+    public LoginPageRole getLogin() {
         WaitForElement.waitUntillElementIsVisible(login);
-        return login;
+        login.click();
+        LoginPageRole lr = new LoginPageRole(driver);
+        return lr;
+
     }
 
     public WebElement getLoginAndPassword() {
