@@ -21,17 +21,20 @@ public class base {
 
     public WebDriver initializeDriver() throws IOException {
         prop = new Properties();
-        FileInputStream fis = new FileInputStream("C:\\Users\\alubkowski\\IdeaProjects\\E2EProject\\src\\main\\java\\OSF\\resources\\data.properties");
+        //System.getProperty("user.dir")
+        FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\OSF\\resources\\data.properties");
 
         prop.load(fis);
+        //mvn test -Dbrowser=chrome
+        //String browserName=System.getProperty("browser");
         String browserName = prop.getProperty("browser");
 
         if (browserName.equals("chrome")) {
-            System.setProperty("webdriver.chrome.driver", "C:\\Users\\alubkowski\\IdeaProjects\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\main\\java\\OSF\\resources\\chromedriver.exe");
             driver = new ChromeDriver();
 
         } else if (browserName.equals("firefox")) {
-            System.setProperty("webdriver.gecko.driver", "C:\\Users\\alubkowski\\IdeaProjects\\geckodriver.exe");
+            System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\java\\OSF\\resources\\geckodriver.exe");
             driver = new FirefoxDriver();
         }
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

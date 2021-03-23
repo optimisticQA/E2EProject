@@ -16,10 +16,10 @@ public class LoginPageRole {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(css = "*[for*='rw']")
+    private @FindBy(css = "*[for*='rw']")
     WebElement rolarw;
 
-    @FindBy(xpath = "//a[@id='buttonContinue']")
+    private @FindBy(xpath = "//a[@id='buttonContinue']")
     WebElement clickcontinue;
 
     public WebElement getRolaRW() {

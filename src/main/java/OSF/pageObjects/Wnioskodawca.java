@@ -16,58 +16,58 @@ public class Wnioskodawca {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//a[contains(text(),'Wnioskodawca')]")
+    private @FindBy(xpath = "//a[contains(text(),'Wnioskodawca')]")
     WebElement goToWnioskodawca;
 
-    @FindBy(xpath = "//span[contains(text(),'Wybierz z bazy OPI')]")
+    private @FindBy(xpath = "//span[contains(text(),'Wybierz z bazy OPI')]")
     WebElement fromDatabase;
 
-    @FindBy(xpath = "//input[@role='textbox']")
+    private @FindBy(xpath = "//input[@role='textbox']")
     WebElement enterApplicant;
 
-    @FindBy(xpath = "//span[contains(text(),'Wyszukaj')]")
+    private @FindBy(xpath = "//span[contains(text(),'Wyszukaj')]")
     WebElement search;
 
-    @FindBy(xpath = "//strong[contains(text(),' ')]/following-sibling::div[1]/div[1]/button")
+    private @FindBy(xpath = "//strong[contains(text(),' ')]/following-sibling::div[1]/div[1]/button")
     WebElement choose;
 
-    @FindBy(xpath = "//button[@id='wnioskodawcaForm:daneWnioskodawcyId_edit_button']")
+    private @FindBy(xpath = "//button[@id='wnioskodawcaForm:daneWnioskodawcyId_edit_button']")
     WebElement editWnioskodawca;
 
-    @FindBy(xpath = "//input[@id='wnioskodawcaForm:nazwaBankuEdit']")
+    private @FindBy(xpath = "//input[@id='wnioskodawcaForm:nazwaBankuEdit']")
     WebElement bankName;
 
-    @FindBy(xpath = "//input[@id='wnioskodawcaForm:numerKontaEdit']")
+    private @FindBy(xpath = "//input[@id='wnioskodawcaForm:numerKontaEdit']")
     WebElement accountNumber;
 
-    @FindBy(xpath = "//input[@id='wnioskodawcaForm:epuapEdit']")
+    private @FindBy(xpath = "//input[@id='wnioskodawcaForm:epuapEdit']")
     WebElement ePUAP;
 
-    @FindBy(xpath = "//input[@id='wnioskodawcaForm:nipEdit']")
+    private @FindBy(xpath = "//input[@id='wnioskodawcaForm:nipEdit']")
     WebElement NIP;
 
-    @FindBy(xpath = "//input[@id='wnioskodawcaForm:regonEdit']")
+    private @FindBy(xpath = "//input[@id='wnioskodawcaForm:regonEdit']")
     WebElement REGON;
 
-    @FindBy(xpath = "//button[@id='wnioskodawcaForm:daneWnioskodawcyId_edit_dialog_save_button']")
+    private @FindBy(xpath = "//button[@id='wnioskodawcaForm:daneWnioskodawcyId_edit_dialog_save_button']")
     WebElement saveWnioskodawca;
 
-    @FindBy(xpath = "//h2[contains(text(),'Oświadczenia')]/following-sibling::div[1]/button")
+    private @FindBy(xpath = "//h2[contains(text(),'Oświadczenia')]/following-sibling::div[1]/button")
     WebElement editStatement;
 
-    @FindBy(xpath = "//div[@id='wnioskodawcaForm:editTblOswiadczeniaId:0:oswInformacjeWeWnioskuEditId']")
+    private @FindBy(xpath = "//div[@id='wnioskodawcaForm:editTblOswiadczeniaId:0:oswInformacjeWeWnioskuEditId']")
     WebElement statement1;
 
-    @FindBy(xpath = "//div[@id='wnioskodawcaForm:editTblOswiadczeniaId:1:oswInformacjeWeWnioskuEditId']")
+    private @FindBy(xpath = "//div[@id='wnioskodawcaForm:editTblOswiadczeniaId:1:oswInformacjeWeWnioskuEditId']")
     WebElement statement2;
 
-    @FindBy(xpath = "//div[@id='wnioskodawcaForm:editTblOswiadczeniaId:3:oswInformacjeWeWnioskuEditId']")
+    private @FindBy(xpath = "//div[@id='wnioskodawcaForm:editTblOswiadczeniaId:3:oswInformacjeWeWnioskuEditId']")
     WebElement statement3;
 
-    @FindBy(xpath = "//div[@id='wnioskodawcaForm:editTblOswiadczeniaId:4:oswInformacjeWeWnioskuEditId']")
+    private @FindBy(xpath = "//div[@id='wnioskodawcaForm:editTblOswiadczeniaId:4:oswInformacjeWeWnioskuEditId']")
     WebElement statement4;
 
-    @FindBy(xpath = "//h2[contains(text(),'Oświadczenia')]/following-sibling::div[2]/div/div[3]/span/button[1]")
+    private @FindBy(xpath = "//h2[contains(text(),'Oświadczenia')]/following-sibling::div[2]/div/div[3]/span/button[1]")
     WebElement saveStatement;
 
     public WebElement getGoToWnioskodawca() {

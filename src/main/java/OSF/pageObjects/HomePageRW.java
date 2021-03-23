@@ -16,10 +16,10 @@ public class HomePageRW {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//span[contains(text(),'Wnioski')]")
+    private @FindBy(xpath = "//span[contains(text(),'Wnioski')]")
     WebElement wnioski;
 
-    @FindBy(xpath = "//span[contains(text(),'Nowy wniosek')]")
+    private @FindBy(xpath = "//span[contains(text(),'Nowy wniosek')]")
     WebElement nowyWiosek;
 
 

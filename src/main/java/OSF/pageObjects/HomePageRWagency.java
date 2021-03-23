@@ -17,17 +17,17 @@ public class HomePageRWagency {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(css = "i.mnisv-pl")
+    private @FindBy(css = "i.mnisv-pl")
     WebElement agencyMNISW;
 
-    @FindBy(xpath = "//a[contains(text(),'Wniosek do konkursu w ramach Narodowego Programu R')]")
+    private @FindBy(xpath = "//a[contains(text(),'Wniosek do konkursu w ramach Narodowego Programu R')]")
     WebElement contestNPRHk11;
 
-    @FindBy(xpath = "//a[@href='/app/zsun1/minist/jgng/wniosek/jgng-nowy-wniosek.xhtml']")
+    private @FindBy(xpath = "//a[@href='/app/zsun1/minist/jgng/wniosek/jgng-nowy-wniosek.xhtml']")
     WebElement contestGNGk5;
 
     public WebElement getAgencyNameMNISW() {
-        WaitForElement.waitUntillElementIsVisible(agencyMNISW);
+        WaitForElement.waitUntilElementIsClickable(agencyMNISW);
         return agencyMNISW;
     }
 

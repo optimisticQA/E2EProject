@@ -8,6 +8,7 @@
 
     <test name="Create an application">
         <classes>
+            <class name="OSF.LoginAplication"/>
             <class name="OSF.CreateAnApplication"/>
         </classes>
     </test>

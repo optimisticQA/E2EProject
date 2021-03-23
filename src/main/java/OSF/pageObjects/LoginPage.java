@@ -16,16 +16,16 @@ public class LoginPage {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//input[@id='loginId']")
+    private @FindBy(xpath = "//input[@id='loginId']")
     WebElement username;
 
-    @FindBy(xpath = "//input[@type='password']")
+    private @FindBy(xpath = "//input[@type='password']")
     WebElement password;
 
-    @FindBy(xpath = "//*[@id='buttonZapisz']")
+    private @FindBy(xpath = "//*[@id='buttonZapisz']")
     WebElement login;
 
-    @FindBy(xpath = "//a[contains(text(),'Pobierz login i hasło')]")
+    private @FindBy(xpath = "//a[contains(text(),'Pobierz login i hasło')]")
     WebElement loginAndPassword;
 
 

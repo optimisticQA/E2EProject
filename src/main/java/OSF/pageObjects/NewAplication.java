@@ -16,13 +16,13 @@ public class NewAplication {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//a[text()='Pobierz komunikat']")
+    private @FindBy(xpath = "//a[text()='Pobierz komunikat']")
     WebElement downloadMessage;
 
-    @FindBy(xpath = "//div[@class='ui-chkbox-box ui-widget ui-corner-all ui-state-default']")
+    private @FindBy(xpath = "//div[@class='ui-chkbox-box ui-widget ui-corner-all ui-state-default']")
     WebElement selectStatementGNGk5;
 
-    @FindBy(xpath = "//button[@id='tworzenieWnioskuDialogForm:utworzId']//span[@class='ui-button-text ui-c']")
+    private @FindBy(xpath = "//button[@id='tworzenieWnioskuDialogForm:utworzId']//span[@class='ui-button-text ui-c']")
     WebElement createApplication;
 
 

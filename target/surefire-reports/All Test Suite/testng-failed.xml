@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [All Test Suite]" parallel="tests">
   <listeners>
     <listener class-name="OSF.Listeners"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="Create an application(failed)" verbose="0">
+  <test thread-count="5" verbose="0" name="Create an application(failed)" parallel="tests">
     <classes>
       <class name="OSF.CreateAnApplication">
         <methods>
           <include name="createAplication"/>
-          <include name="uzupelnijWnioskodawca"/>
+          <include name="uzupelnijWnioskodawca" invocation-numbers="0"/>
           <include name="teardown"/>
           <include name="selectAgency"/>
-          <include name="loginPage" invocation-numbers="0"/>
+          <include name="loginPage"/>
           <include name="initialize"/>
           <include name="newApplication"/>
         </methods>
