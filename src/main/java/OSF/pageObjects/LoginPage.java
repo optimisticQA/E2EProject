@@ -44,14 +44,12 @@ public class LoginPage {
         login.click();
         LoginPageRole lr = new LoginPageRole(driver);
         return lr;
-
     }
 
+    //Asercja
     public WebElement getLoginAndPassword() {
         WaitForElement.waitUntillElementIsVisible(loginAndPassword);
         return loginAndPassword;
-    } //Asercja
-
-
+    }
 }
 

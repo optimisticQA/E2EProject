@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="All Test Suite" parallel ="tests">
+<suite name="All Test Suite" parallel="tests">
 
     <listeners>
         <listener class-name="OSF.Listeners"/>
     </listeners>
 
-    <test name="Create an application">
+    <test name="Login validation">
         <classes>
-            <class name="OSF.LoginAplication"/>
             <class name="OSF.CreateAnApplication"/>
+            <class name="OSF.LoginAplication"/>
         </classes>
     </test>
 </suite>

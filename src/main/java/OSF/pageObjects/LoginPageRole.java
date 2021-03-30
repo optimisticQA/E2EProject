@@ -22,6 +22,9 @@ public class LoginPageRole {
     private @FindBy(xpath = "//a[@id='buttonContinue']")
     WebElement clickcontinue;
 
+    private @FindBy(xpath = "//a[contains(text(),'Kontynuuj')]")
+    WebElement succesfullyLogin;
+
     public WebElement getRolaRW() {
         WaitForElement.waitUntillElementIsVisible(rolarw);
         rolarw.click();
@@ -34,7 +37,10 @@ public class LoginPageRole {
         HomePageRW hrw = new HomePageRW(driver);
         return hrw;
     }
-
-
+    //Asercja
+    public WebElement getSuccesfullyLogin() {
+        WaitForElement.waitUntillElementIsVisible(succesfullyLogin);
+        return succesfullyLogin;
+    }
 }
 

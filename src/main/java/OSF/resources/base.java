@@ -5,6 +5,7 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.DataProvider;
 
@@ -22,19 +23,25 @@ public class base {
     public WebDriver initializeDriver() throws IOException {
         prop = new Properties();
         //System.getProperty("user.dir")
-        FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\OSF\\resources\\data.properties");
+        FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "\\src\\main\\java\\OSF\\resources\\data.properties");
 
         prop.load(fis);
         //mvn test -Dbrowser=chrome
         //String browserName=System.getProperty("browser");
         String browserName = prop.getProperty("browser");
 
-        if (browserName.equals("chrome")) {
-            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\main\\java\\OSF\\resources\\chromedriver.exe");
-            driver = new ChromeDriver();
+        //mvn jenkins
+        if (browserName.contains("chrome")) {
+            System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\src\\main\\java\\OSF\\resources\\chromedriver.exe");
+            ChromeOptions options = new ChromeOptions();
+            //Head less mode - make sure you have latest selenium version
+            if (browserName.contains("headless")) {
+                options.addArguments("headless");
+            }
+            driver = new ChromeDriver(options);
 
         } else if (browserName.equals("firefox")) {
-            System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir")+"\\src\\main\\java\\OSF\\resources\\geckodriver.exe");
+            System.setProperty("webdriver.gecko.driver", System.getProperty("user.dir") + "\\src\\main\\java\\OSF\\resources\\geckodriver.exe");
             driver = new FirefoxDriver();
         }
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
