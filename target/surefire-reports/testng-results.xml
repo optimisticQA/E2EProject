@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-03-29T16:31:23 CEST" name="All Test Suite" finished-at="2021-03-29T16:31:27 CEST" duration-ms="4144">
+  <suite started-at="2021-04-01T13:39:41 CEST" name="All Test Suite" finished-at="2021-04-01T13:39:58 CEST" duration-ms="17632">
     <groups>
     </groups>
-    <test started-at="2021-03-29T16:31:23 CEST" name="Create an application/Login validation" finished-at="2021-03-29T16:31:27 CEST" duration-ms="4144">
+    <test started-at="2021-04-01T13:39:41 CEST" name="Login validation" finished-at="2021-04-01T13:39:58 CEST" duration-ms="17632">
       <class name="OSF.LoginAplicationValidation">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:OSF.LoginAplicationValidation@3ec11999]" started-at="2021-03-29T16:31:23 CEST" name="initialize" finished-at="2021-03-29T16:31:24 CEST" duration-ms="1333" status="PASS">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:OSF.LoginAplicationValidation@5fe8b721]" started-at="2021-04-01T13:39:43 CEST" name="initialize" finished-at="2021-04-01T13:39:44 CEST" duration-ms="1001" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="loginPage(java.lang.String, java.lang.String)[pri:0, instance:OSF.LoginAplicationValidation@3ec11999]" started-at="2021-03-29T16:31:24 CEST" name="loginPage" data-provider="getData" finished-at="2021-03-29T16:31:26 CEST" duration-ms="2121" status="PASS">
+        <test-method signature="loginPage(java.lang.String, java.lang.String)[pri:0, instance:OSF.LoginAplicationValidation@5fe8b721]" started-at="2021-04-01T13:39:48 CEST" name="loginPage" data-provider="getData" finished-at="2021-04-01T13:39:50 CEST" duration-ms="1455" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,19 +27,119 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginPage -->
-        <test-method signature="validateSuccesfullyLogin()[pri:0, instance:OSF.LoginAplicationValidation@3ec11999]" started-at="2021-03-29T16:31:26 CEST" name="validateSuccesfullyLogin" finished-at="2021-03-29T16:31:26 CEST" depends-on-methods="OSF.LoginAplicationValidation.loginPage" duration-ms="125" status="PASS">
+        <test-method signature="validateSuccesfullyLogin()[pri:0, instance:OSF.LoginAplicationValidation@5fe8b721]" started-at="2021-04-01T13:39:50 CEST" name="validateSuccesfullyLogin" finished-at="2021-04-01T13:39:50 CEST" depends-on-methods="OSF.LoginAplicationValidation.loginPage" duration-ms="179" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateSuccesfullyLogin -->
-        <test-method signature="validateNavigateToHomePage()[pri:0, instance:OSF.LoginAplicationValidation@3ec11999]" started-at="2021-03-29T16:31:26 CEST" name="validateNavigateToHomePage" finished-at="2021-03-29T16:31:27 CEST" depends-on-methods="OSF.LoginAplicationValidation.validateSuccesfullyLogin" duration-ms="502" status="PASS">
+        <test-method signature="validateNavigateToHomePage()[pri:0, instance:OSF.LoginAplicationValidation@5fe8b721]" started-at="2021-04-01T13:39:50 CEST" name="validateNavigateToHomePage" finished-at="2021-04-01T13:39:51 CEST" depends-on-methods="OSF.LoginAplicationValidation.validateSuccesfullyLogin" duration-ms="528" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateNavigateToHomePage -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:OSF.LoginAplicationValidation@3ec11999]" started-at="2021-03-29T16:31:27 CEST" name="teardown" finished-at="2021-03-29T16:31:27 CEST" duration-ms="40" status="PASS">
+        <test-method is-config="true" signature="teardown()[pri:0, instance:OSF.LoginAplicationValidation@5fe8b721]" started-at="2021-04-01T13:39:58 CEST" name="teardown" finished-at="2021-04-01T13:39:58 CEST" duration-ms="44" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- OSF.LoginAplicationValidation -->
-    </test> <!-- Create an application/Login validation -->
+      <class name="OSF.CreateAnApplication">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:OSF.CreateAnApplication@740abb5]" started-at="2021-04-01T13:39:41 CEST" name="initialize" finished-at="2021-04-01T13:39:42 CEST" duration-ms="1352" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="loginPage(java.lang.String, java.lang.String)[pri:0, instance:OSF.CreateAnApplication@740abb5]" started-at="2021-04-01T13:39:44 CEST" name="loginPage" data-provider="getData" finished-at="2021-04-01T13:39:46 CEST" duration-ms="2016" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[automattest4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Test12345]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPage -->
+        <test-method signature="createAplication()[pri:0, instance:OSF.CreateAnApplication@740abb5]" started-at="2021-04-01T13:39:50 CEST" name="createAplication" finished-at="2021-04-01T13:39:50 CEST" depends-on-methods="OSF.CreateAnApplication.loginPage" duration-ms="321" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createAplication -->
+        <test-method signature="selectAgency()[pri:0, instance:OSF.CreateAnApplication@740abb5]" started-at="2021-04-01T13:39:50 CEST" name="selectAgency" finished-at="2021-04-01T13:39:50 CEST" depends-on-methods="OSF.CreateAnApplication.createAplication" duration-ms="351" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectAgency -->
+        <test-method signature="newApplication()[pri:0, instance:OSF.CreateAnApplication@740abb5]" started-at="2021-04-01T13:39:51 CEST" name="newApplication" finished-at="2021-04-01T13:39:52 CEST" depends-on-methods="OSF.CreateAnApplication.selectAgency" duration-ms="1301" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- newApplication -->
+        <test-method signature="uzupelnijWnioskodawca(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:OSF.CreateAnApplication@740abb5]" started-at="2021-04-01T13:39:52 CEST" name="uzupelnijWnioskodawca" data-provider="getDataWnioskodawca" finished-at="2021-04-01T13:39:58 CEST" depends-on-methods="OSF.CreateAnApplication.newApplication" duration-ms="5846" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Politechnika Warszawska]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[OPI Test BP]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[78249000052816432318720678]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[/epuap/test]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[8883323940]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[10448760077193]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- uzupelnijWnioskodawca -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:OSF.CreateAnApplication@740abb5]" started-at="2021-04-01T13:39:58 CEST" name="teardown" finished-at="2021-04-01T13:39:58 CEST" duration-ms="49" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- OSF.CreateAnApplication -->
+      <class name="OSF.LoginAplication">
+        <test-method is-config="true" signature="initialize()[pri:0, instance:OSF.LoginAplication@560cbf1a]" started-at="2021-04-01T13:39:42 CEST" name="initialize" finished-at="2021-04-01T13:39:43 CEST" duration-ms="1034" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method signature="loginPage(java.lang.String, java.lang.String)[pri:0, instance:OSF.LoginAplication@560cbf1a]" started-at="2021-04-01T13:39:46 CEST" name="loginPage" data-provider="getData" finished-at="2021-04-01T13:39:48 CEST" duration-ms="2090" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[automattest4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Test12345]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginPage -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:OSF.LoginAplication@560cbf1a]" started-at="2021-04-01T13:39:58 CEST" name="teardown" finished-at="2021-04-01T13:39:58 CEST" duration-ms="41" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- OSF.LoginAplication -->
+    </test> <!-- Login validation -->
   </suite> <!-- All Test Suite -->
 </testng-results>

@@ -4,7 +4,7 @@
   <listeners>
     <listener class-name="OSF.Listeners"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="Create an application/Login validation(failed)" verbose="0">
+  <test thread-count="5" parallel="tests" name="Login validation(failed)" verbose="0">
     <classes>
       <class name="OSF.CreateAnApplication">
         <methods>
@@ -18,5 +18,5 @@
         </methods>
       </class> <!-- OSF.CreateAnApplication -->
     </classes>
-  </test> <!-- Create an application/Login validation(failed) -->
+  </test> <!-- Login validation(failed) -->
 </suite> <!-- Failed suite [All Test Suite] -->

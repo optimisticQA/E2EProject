@@ -22,7 +22,11 @@ public class FirstClass {
         int a = 1;
         FirstClass fn = new FirstClass(); //Wzór tworzenia objektu dla klasy
         fn.getDataInt(); //Dzieki temu blok z getDataInt zostanie wykonany w tej metodzie
+
         SecondClass sn = new SecondClass(); //Tworzy obiekt dla metody z innej klasy
+
+        OSF.naukaJava.etap1.SecondClass sn = new OSF.naukaJava.etap1.SecondClass(); //Tworzy obiekt dla metody z innej klasy
+
         sn.setData(); //Wywołuje metodę z innej klasy
         System.out.print("hi ");
         System.out.println("hello world"); //Nowa linia
