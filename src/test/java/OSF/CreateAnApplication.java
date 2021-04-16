@@ -4,6 +4,7 @@ import OSF.pageObjects.*;
 import OSF.resources.base;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -86,12 +87,19 @@ public class CreateAnApplication extends base {
         w.getREGON().sendKeys(NumerRegon);
         w.getSaveWnioskodawca().click();
         w.getEditStatement().click();
-        w.getStatement1().click();
-        w.getStatement2().click();
-        w.getStatement3().click();
-        w.getStatement4().click();
-        w.getSaveStatement().click();
-        log.info("The applicant section was successfully completed");
+        for (int retry = 0; retry < 2; retry++) {
+            try {
+                w.getStatement1().click();
+                w.getStatement2().click();
+                w.getStatement3().click();
+                w.getStatement4().click();
+                w.getSaveStatement().click();
+                log.info("The applicant section was successfully completed");
+                break;
+            } catch (StaleElementReferenceException ex) {
+                System.out.println((ex.toString()));
+            }
+        }
     }
 
     @AfterTest

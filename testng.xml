@@ -10,6 +10,7 @@
         <classes>
             <class name="OSF.CreateAnApplication"/>
             <class name="OSF.LoginAplication"/>
+            <class name="OSF.LoginAplicationValidation"/>
         </classes>
     </test>
 </suite>
